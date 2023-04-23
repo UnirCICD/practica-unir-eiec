@@ -1,0 +1,12 @@
+carro
+nuevo
+casa
+refrigerador
+carro
+amarillo
+azul
+rojo
+rojo
+rojo
+verde
+azul
