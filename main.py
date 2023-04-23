@@ -60,7 +60,7 @@ if __name__ == "__main__":
 def translateMessage(message):
     #Diccionario de traducciones
     translations = {
-        "Se debe indicar el fichero como primer argumento":"The file must be specified as the first arguments",
+        "Se debe indicar el fichero como primer argumento":"The file must be specified as the first argument",
         "El segundo argumento indica si se quieren eliminar duplicados":"The second argument indicates whether you want to remove duplicates",
         "Se leerán las palabras del fichero":"The words of the file will be read",
         "El fichero":"The file",
