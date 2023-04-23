@@ -5,9 +5,11 @@ Organization: UNIR
 
 import os
 import sys
+import traductor
 
 DEFAULT_FILENAME = "words.txt"
 DEFAULT_DUPLICATES = False
+DEFAULT_ORDER = True
 
 
 def sort_list(items, ascending=True, deleteDuplicates=False):
@@ -30,13 +32,19 @@ def remove_duplicates_from_list(items):
 if __name__ == "__main__":
     filename = DEFAULT_FILENAME
     remove_duplicates = DEFAULT_DUPLICATES
-    if len(sys.argv) == 3:
+    order = DEFAULT_ORDER
+    if len(sys.argv) == 4:
         filename = sys.argv[1]
         remove_duplicates = sys.argv[2].lower() == "yes"
+        order = sys.argv[3]
     else:
         #print("Se debe indicar el fichero como primer argumento")
         print(translateMessage("Se debe indicar el fichero como primer argumento"))
         print(translateMessage("El segundo argumento indica si se quieren eliminar duplicados"))
+=======
+        print("Se debe indicar el fichero como primer argumento")
+        print("El segundo argumento indica si se quieren eliminar duplicados")
+        print("El tercer argumento indica si el orden debe ser ascendente o descendente")
         sys.exit(1)
     wordFile = translateMessage("Se leerán las palabras del fichero")
     print(f"{wordFile} {filename}")
@@ -73,3 +81,9 @@ def translateMessage(message):
     else:
         #Si el mensaje no está en el diccionario
         return message
+=======
+    traductor.translateWords(sort_list(word_list))
+   # print(sort_list(word_list))
+    
+=======
+    print(sort_list(word_list,order))
